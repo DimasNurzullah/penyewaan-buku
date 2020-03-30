@@ -1,0 +1,19 @@
+<?php
+include_once('koneksi.php');
+	$judul=$_POST['judul'];
+	$penyewa=$_POST['penyewa'];
+	$durasi=$_POST['durasi'];
+$tanggal_sewa=date('y-m-d');
+
+mysqli_query($koneksi,"INSERT INTO sewa (judul,penyewa,durasi,tanggal_sewa) VALUES ('$judul','$penyewa','$durasi','$tanggal_sewa')");
+header("location:index.php");
+
+
+
+
+
+
+// echo $judul."<br/>";
+// echo $penyewa."<br/>";
+// echo $durasi."<br/>";
+// echo $tanggal_sewa."<br/>";
